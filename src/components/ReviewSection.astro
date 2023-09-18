@@ -1,0 +1,13 @@
+---
+import { Reviews } from "./Reviews";
+const { titleStyle, oddSectionStyle, headerStyle } = Astro.props;
+---
+
+<section class={`${oddSectionStyle}`}>
+  <header class={headerStyle}>
+    <h2 class={titleStyle}>¡Quienes confían en nosotros!</h2>
+  </header>
+  <main class="flex flex-col py-5">
+      <Reviews client:visible />
+  </main>
+</section>

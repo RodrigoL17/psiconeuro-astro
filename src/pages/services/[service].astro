@@ -1,0 +1,43 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import { SERVICES } from "../../utils/const";
+export const getStaticPaths = () => {
+  return SERVICES.map(
+    ({
+      url_path,
+      title,
+      short_title,
+      img_src,
+      mode,
+      duration,
+      description,
+    }) => {
+      return {
+        params: { service: url_path },
+        props: {
+          title: title,
+          short_title: short_title,
+          img_src: img_src,
+          mode: mode,
+          duration: duration,
+          description: description,
+        },
+      };
+    }
+  );
+};
+const { service } = Astro.params;
+const { title, short_title, img_src, mode, duration, description } =
+  Astro.props;
+---
+
+<Layout title={title}>
+  <h1>{service}</h1>
+  <p>{title}</p>
+  <p>{short_title}</p>
+  <p>{img_src}</p>
+  <p>{mode}</p>
+  <p>{duration}</p>
+  <p>{description}</p>
+</Layout>
+

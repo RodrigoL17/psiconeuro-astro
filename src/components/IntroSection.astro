@@ -1,0 +1,27 @@
+---
+import Cover from "./Cover.astro";
+const {titleStyle} = Astro.props
+---
+
+<section
+  class="min-h-screen bg-gradient-to-b from-white/30 from-50% via-[#e5fbf6]/50 via-75% to-[#e5fbf6] to-100% flex flex-col justify-center tb:items-center tb:justify-normal tb:flex-row"
+>
+  <Cover />
+  <div
+    class="flex flex-col px-10 slt:px-16 lt:px-24 justify-center items-center tb:items-start text-white gap-3"
+  >
+    <h1
+      class={`${titleStyle} tb:text-left`}
+    >
+      Psico Neuro Espiritual
+    </h1>
+    <p
+      class="text-secondary text-sm px-10 text-center tb:text-left tb:px-0 tb:text-base slt:text-lg italic tb:max-w-[85%] slt:max-w-[75%] lt:max-w-[60%] whitespace-pre-line"
+    >
+      Tu bienestar integral es nuestra prioridad. Conectando <strong>psicología</strong>, <strong>espiritualidad</strong>, <strong>yoga</strong> y <strong>neurociencias</strong>, te acompañamos hacia tu máximo potencial. En un entorno cálido y acogedor, nuestro <strong>equipo de profesionales</strong> trabaja para
+      nutrir tu bienestar general. <strong>Únete</strong> y forma parte de nuestra visión de promover <strong>la armonía y el equilibrio en todos los ámbitos de la vida.</strong>
+      
+    </p>
+  </div>
+</section>
+

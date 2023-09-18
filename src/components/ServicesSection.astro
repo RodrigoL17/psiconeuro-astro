@@ -1,0 +1,25 @@
+---
+import { SERVICES } from "../utils/const";
+import ServiceCard from "./ServiceCard.astro";
+const { titleStyle, evenSectionStyle, headerStyle } = Astro.props;
+---
+
+<section class={evenSectionStyle}>
+  <header class={headerStyle}>
+    <h2 class={titleStyle}>¿Como podemos ayudarte?</h2>
+  </header>
+  <main
+    class="flex flex-col gap-6 slt:grid slt:grid-cols-2 slt:gap-4 lt:gap-8 xls:grid-cols-3"
+  >
+    {
+      SERVICES.map(({ title, img_src, description, url_path }) => (
+        <ServiceCard
+          title={title}
+          img_src={img_src}
+          description={description}
+          url_path={url_path}
+        />
+      ))
+    }
+  </main>
+</section>

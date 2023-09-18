@@ -1,0 +1,72 @@
+---
+const {titleStyle, oddSectionStyle, headerStyle} = Astro.props
+---
+
+
+<section class={oddSectionStyle}>
+    <header class={headerStyle}>
+      <h2 class={titleStyle}>
+        ¿Quienes somos?
+      </h2>
+      <h3 class="text-xl tb:text-2xl slt:text-3xl lt:text-5xl font-primary text-center">
+        ¿Que nos diferencia de otros espacios holísticos?
+      </h3>
+    </header>
+
+    <main class="flex justify-center flex-col  gap-10">
+      <p class="text-sm slt:text-base lt:text-lg">
+        En{" "}
+        <span class="text-[#6e00d3] font-primary font-bold text-base slt:text-lg lt:text-2xl">
+          Psiconeuro Espiritual
+        </span>
+        , nos dedicamos a crear un espacio seguro y acogedor, donde nuestro
+        equipo de expertos se esfuerza por promover tu bienestar integral
+        mente-cuerpo-alma. Nuestra misión es ofrecer un enfoque holístico que
+        combine la psicoterapia, yoga, reiki y las neurociencias para acompañarte, educarte y
+        guiarte en tu camino hacia una salud y bienestar óptimos. Nuestra
+        visión es brindar soluciones innovadoras y efectivas para ayudarte a
+        alcanzar tu máximo potencial.
+      </p>
+      <p class="text-xl">
+        <strong>Nuestros valores fundamentales:</strong>
+      </p>
+      <p class="text-sm slt:text-base lt:text-lg">
+        ✨
+        <strong class="text-[#6e00d3] font-primary text-base slt:text-lg lt:text-2xl">
+          Integridad:
+        </strong>
+        {" "}Abrazamos una perspectiva integral e innovadora del ser humano,
+        que engloba y conecta los procesos que involucran el cuerpo, la mente,
+        las emociones y el alma.
+      </p>
+      <p class="text-sm slt:text-base lt:text-lg">
+        ✨
+        <strong class="text-[#6e00d3] font-primary text-base slt:text-lg lt:text-2xl">
+          Espiritualidad:
+        </strong>{" "}
+        Creemos en la importancia de la conexión energética para el bienestar
+        humano y trabajamos para ayudar a nuestros clientes a desarrollar su
+        evolución como seres infinitos.
+      </p>
+      <p class="text-sm slt:text-base lt:text-lg">
+        ✨
+        <strong class="text-[#6e00d3] font-primary text-base slt:text-lg lt:text-2xl">
+          Compasión:
+        </strong>{" "}
+        Nos esforzamos por crear un ambiente cálido y comprensivo, donde te
+        sientas seguro y escuchado en tu camino hacia un bienestar pleno."
+      </p>
+      <p class="text-sm slt:text-base lt:text-lg">
+        ✨
+        <strong class="text-[#6e00d3] font-primary text-base slt:text-lg lt:text-2xl">
+          Conexión:
+        </strong>{" "}
+        Proporcionamos las herramientas para que puedas entrar en comunión con
+        tu cuerpo, escucharlo, sentirlo y reconocerlo. Poder comunicarte con
+        tu cuerpo es esencial en el camino del autoconocimiento
+      </p>
+    </main>
+    <footer class="flex justify-center">
+        <a href="/about" class="bg-[#6e00d3] text-white font-primary text-base mt-10 py-1 px-3 slt:text-xl slt:py-2 slt:px-5 lt:text-2xl lt:py-3 lt:px-7 rounded-lg">conoce a nuestro equipo</a>
+    </footer>
+  </section>

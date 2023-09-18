@@ -1,0 +1,36 @@
+---
+import Arrow from "./icons/Arrow.astro";
+const { title, img_src, description, url_path } = Astro.props;
+---
+
+<div
+  class="flex flex-col rounded-xl bg-white bg-clip-border shadow-md"
+>
+  <div class="p-5 slt:p-6">
+    <img
+      class="mb-2 w-14 h-14 slt:w-16 slt:h-16 xls:h-20 xls:w-20"
+      src={img_src}
+      alt={`Representacion de ${title}`}
+    />
+    <h3
+      class="mb-1 block font-primary text-xl slt:text-2xl lt:text-3xl font-semibold leading-6 tracking-normal antialiased min-h-[48px] slt:min-h-[64px] lt:min-h-[72px]"
+    >
+      {title}
+    </h3>
+    <p class="line-clamp-3 text-sm lt:text-base min-h-[60px]">{description}</p>
+  </div>
+  <div class="p-4 slt:p-5 pt-0">
+    <a
+      href={`/services/${url_path}`}
+    >
+      <button
+        class="flex select-none items-center gap-2 rounded-lg py-2 px-4 text-center align-middle font-primary text-xs  slt:text-sm lt:text-base font-semibold uppercase text-[#6e00d3] transition-all hover:bg-[#6e00d3]/10 active:bg-[#6e00d3]/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button"
+        data-ripple-dark="true"
+      >
+        Más Información
+        <Arrow />
+      </button>
+    </a>
+  </div>
+</div>
