@@ -1,0 +1,47 @@
+---
+import ContactLink from "./ContactLink.astro";
+import GoogleMapEmbed from "./GoogleMapEmbed.astro";
+import MapPinIcon from "./icons/MapPinIcon.astro";
+import WhatsappIcon from "./icons/WhatsappIcon.astro";
+import MailIcon from "./icons/MailIcon.astro";
+import InstagramIcon from "./icons/InstagramIcon.astro";
+const { titleSectionStyle, oddSectionStyle, headerStyle } = Astro.props;
+---
+
+<section class={oddSectionStyle}>
+  <header class={headerStyle}>
+    <h2 class={titleSectionStyle}>Contacto</h2>
+  </header>
+  <main class="grid grid-cols-5 gap-8 bg-white rounded-xl p-8 shadow-xl">
+    <div class="col-span-2 flex flex-col gap-10">
+      <h3 class="text-2xl font-primary">Contáctanos por estos medios</h3>
+      <ContactLink
+        text="Whatsapp"
+        href="https://wa.me/message/SFFF7OILKDLZO1"
+        target="_blank"
+      >
+        <WhatsappIcon slot="icon" />
+      </ContactLink>
+
+      <ContactLink
+        text="E-mail"
+        href="mailto:belen.vitullo@gmail.com"
+      >
+        <MailIcon slot="icon" />
+      </ContactLink>
+      <ContactLink text="Instagram" href="https://www.instagram.com/psiconeuro.espiritual" target="_blank">
+        <InstagramIcon slot="icon" />
+      </ContactLink>
+      <ContactLink
+        text="Hungria 1170, C.A.B.A"
+        href="https://www.google.com/maps/place/Centro+PsicoNeuroEspiritual+-+Psicolog%C3%ADa+Holistica,+Reiki+y+Yoga/@-34.6286247,-58.506938,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcc95576a10a47:0xc44596316636bd8f!8m2!3d-34.6286291!4d-58.5043631!16s%2Fg%2F11sw_7z83n?entry=ttu"
+        target="_blank"
+      >
+        <MapPinIcon slot="icon" />
+      </ContactLink>
+    </div>
+    <div class="col-span-3">
+      <GoogleMapEmbed />
+    </div>
+  </main>
+</section>

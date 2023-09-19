@@ -1,0 +1,16 @@
+---
+import PricingCard from "./PricingCard.astro";
+const { evenSectionStyle, titleSectionStyle, headerStyle } = Astro.props;
+---
+
+<section class={evenSectionStyle}>
+  <header class={headerStyle}>
+    <h2 class={titleSectionStyle}>Elige tu plan</h2>
+  </header>
+  <main class="flex gap-12 justify-center flex-wrap">
+    <PricingCard />
+    <PricingCard />
+    <PricingCard />
+    <PricingCard />
+  </main>
+</section>

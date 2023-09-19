@@ -1,31 +1,25 @@
 ---
+import ContactSection from "../components/ContactSection.astro";
 import IntroSection from "../components/IntroSection.astro";
+import PricingSection from "../components/PricingSection.astro";
 import ProfessionalSection from "../components/ProfessionalSection.astro";
 import ReviewSection from "../components/ReviewSection.astro";
 import ServicesSection from "../components/ServicesSection.astro";
 import Layout from "../layouts/Layout.astro";
 const title = "Psico Neuro - Home"; 
 const titleSectionStyle = "text-3xl tb:text-4xl w-full slt:text-5xl lt:text-7xl font-primary text-center"
-const oddSectionStyle = "min-h-screen bg-gradient-to-b from-[#e5fbf6] to-[#fef7ff] px-6 slt:px-16 lt:px-24 pb-[7rem] flex flex-col justify-around"
-const evenSectionStyle = "min-h-screen bg-gradient-to-b from-[#fef7ff] to-[#e5fbf6] px-6 slt:px-16 lt:px-24 pb-[7rem] flex flex-col justify-around"
+const oddSectionStyle = "min-h-screen bg-gradient-to-b from-[#e5fbf6] to-[#fef7ff] px-6 slt:px-16 lt:px-24 pb-[7rem] flex flex-col space-y-8"
+const evenSectionStyle = "min-h-screen bg-gradient-to-b from-[#fef7ff] to-[#e5fbf6] px-6 slt:px-16 lt:px-24 pb-[7rem] flex flex-col space-y-8"
 const headerStyle = "mb-14"
 ---
 
 <Layout title={title}>
-  <main class="">
+  <main>
     <IntroSection titleStyle={titleSectionStyle}/>
     <ProfessionalSection titleStyle={titleSectionStyle} oddSectionStyle={oddSectionStyle} headerStyle={headerStyle}/>
     <ServicesSection titleStyle={titleSectionStyle} evenSectionStyle={evenSectionStyle} headerStyle={headerStyle}/>
     <ReviewSection titleStyle={titleSectionStyle} oddSectionStyle={oddSectionStyle} headerStyle={headerStyle}/>
-    <section
-      class="h-screen bg-gradient-to-b from-[#fef7ff] to-[#e5fbf6] border-b solid border-black "
-    >
-      precios
-    </section>
-    <section
-      class="h-screen bg-gradient-to-b from-[#e5fbf6] to-[#fef7ff] border-b solid border-black"
-    >
-      contacto
-    </section>
+    <PricingSection titleSectionStyle={titleSectionStyle} evenSectionStyle={evenSectionStyle} headerStyle={headerStyle}/>
+    <ContactSection titleSectionStyle={titleSectionStyle} oddSectionStyle={oddSectionStyle} headerStyle={headerStyle}/>
   </main>
 </Layout>

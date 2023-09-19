@@ -13,9 +13,9 @@ export const ReviewCard = ({ review }: { review: Review }) => {
     <Card
       color="transparent"
       shadow={false}
-      className="w-full px-2 py-3 tb:px-14 slt:px-16 lt:px-20 h-full flex justify-center"
+      className="w-full px-2 py-10 tb:px-14 slt:px-16 lt:px-20 h-full flex justify-center"
     >
-      <div className="bg-white rounded-xl p-6 shadow-md">
+      <div className="bg-white rounded-xl p-6 shadow-xl shadow-[#d5a8ff]/30">
         <CardHeader
           color="transparent"
           floated={false}
@@ -29,7 +29,7 @@ export const ReviewCard = ({ review }: { review: Review }) => {
           />
           <div className="flex w-full flex-col gap-0.5">
             <div className="flex items-center justify-between">
-              <Typography variant="h3" className="text-base tb:text-lg slt:text-xl lt:text-2xl">
+              <Typography variant="h3" className="text-base tb:text-lg slt:text-xl lt:text-2xl font-primary">
                 {review.author_name}
               </Typography>
               <div className="flex items-center gap-0">

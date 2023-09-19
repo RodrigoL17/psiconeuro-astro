@@ -1,0 +1,18 @@
+---
+interface Props {
+  text: string;
+  href?: string;
+  target?: string;
+}
+const { text, href, target } = Astro.props;
+---
+
+<a
+  class="flex items-center gap-3 font-primary font-bold text-[#6e00d3]"
+  href={href}
+  target={target}
+  ><span
+    class="rounded-full p-2 border text-[#6e00d3] border-[#6e00d3]/20 bg-[#6e00d3]/20"
+    ><slot name="icon" /></span
+  >{text}</a
+>
